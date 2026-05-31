@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import WeatherCard from "@components/WeatherCard";
 import { getCurrentWeather } from "@services/weatherService";
 import "@styles/pages/WeatherPage.scss";
+import WeatherSkeleton from "@components/WeatherSkeleton";
 
 function WeatherPage() {
   const { t, i18n } = useTranslation();
@@ -64,7 +65,7 @@ function WeatherPage() {
           </button>
         </div>
 
-        {loading && <p className="status-text">{t("loading")}</p>}
+        {loading && <WeatherSkeleton />}
 
         {!loading && errorMessage && (
           <p className="error-message">{t("error")}</p>
