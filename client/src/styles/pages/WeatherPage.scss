@@ -1,0 +1,62 @@
+@use "@styles/Global.scss" as *;
+
+.weather-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    $primary-background-color,
+    $secondary-background-color
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-section {
+  width: 100%;
+  max-width: 520px;
+}
+
+.language-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  button {
+    padding: 8px 14px;
+    border: 1px solid rgba($primary-color, 0.35);
+    border-radius: 999px;
+    background: transparent;
+    color: $primary-color;
+    font-size: $text-s;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba($primary-color, 0.12);
+    }
+
+    &.active {
+      background: $primary-color;
+      color: $primary-background-color;
+      border-color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.status-text,
+.error-message {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba($primary-color, 0.12);
+  color: $primary-color;
+  text-align: center;
+  font-size: $text-m;
+}
+
+.error-message {
+  color: #ffb4b4;
+}

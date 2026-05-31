@@ -1,7 +1,9 @@
-import "@styles/App.scss";
 import "@styles/Reset.scss";
+import "@styles/App.scss";
+import WeatherPage from "@/pages/WeatherPage";
+
 function App() {
-  return <>APP</>;
+  return <WeatherPage />;
 }
 
 export default App;

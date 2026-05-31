@@ -1,6 +1,6 @@
 @use "@styles/Global.scss" as *;
 
-#root {
-  background: $primary-background-color;
+.app {
   min-height: 100vh;
+  background:$primary-background-color;
 }
