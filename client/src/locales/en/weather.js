@@ -4,6 +4,7 @@ const weather = {
   temperature: "Temperature",
   location: "Location",
   updated: "Last Updated",
+  recorded: "Last Record",
   source: "Source",
   loading: "Loading weather data...",
   error: "Failed to load weather data.",

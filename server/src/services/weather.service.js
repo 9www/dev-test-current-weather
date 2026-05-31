@@ -28,7 +28,6 @@ const getWeatherByLanguage = async (lang) => {
     ) || temperatureList[0];
 
   const iconCode = data.icon?.[0] ?? null;
-
   return {
     location:
       temperatureData?.place ||
@@ -39,6 +38,7 @@ const getWeatherByLanguage = async (lang) => {
     temperature: temperatureData?.value ?? null,
     unit: temperatureData?.unit || data.temperature?.unit || "C",
     updateTime: data.updateTime || null,
+    recordTime: data.temperature.recordTime || null,
     source: SOURCE_NAME,
   };
 };
